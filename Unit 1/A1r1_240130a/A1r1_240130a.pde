@@ -45,6 +45,21 @@ void draw() {
   rect(225+400, 170+300, 160, 120);
   fill(#2f2a28);
   rect(225+400, 170+450, 160, 120);
+  
+  // TIME TO MAKE REACTANGLES IN RECTANGLES
+  fill(#e6e5e0);
+  rect(245, 45, 120, 77);
+  rect(245, 190, 120, 77);
+  rect(245, 190+150, 120, 77);
+  rect(245, 189+300, 120, 77);
+  rect(245, 190+450, 120, 77);
+  // last column
+  fill(#e6e5e0);
+  rect(645, 45, 120, 77);
+  rect(245, 190, 120, 77);
+  rect(245, 190+150, 120, 77);
+  rect(245, 189+300, 120, 77);
+  rect(245, 190+450, 120, 77);
 }
 void mouseClicked() {
   save("buttfart.png");

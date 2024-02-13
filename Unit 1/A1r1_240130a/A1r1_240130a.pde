@@ -84,7 +84,7 @@ void draw() {
   rect(645, 189+300, 120, 77);
   rect(645, 190+450, 120, 77);
 
-  // lines column 1
+  // first pair of lines
   // THESE LINES ACTAUALLY TOOK ME AGES TO FIGURE OUT
   stroke(189,62,27,165);// the last number adjusts the opacity of the line
   line(146, 288, 146, 171);
@@ -92,13 +92,18 @@ void draw() {
   line(63, 288, 63, 171);
   stroke(33,57,40,140);
   line(26, 228, 183, 227);
- 
-  stroke(189,62,57,165);
-  line(276, 288, 275, 171);
-  stroke(189,62,57,165);
-  line(63, 288, 63, 171);
+
+  stroke(189,62,27,165);
+  line(146+200, 288, 146+200, 171);
+  stroke(189,62,27,165);
+  line(63+200, 288, 63+200, 171);
   stroke(33,57,40,140);
-  line(26, 228, 183, 227);
+  line(26+200, 228, 183+200, 227);
+  
+  // second pair
+  stroke(54,15,15);
+  line(505,288,505,170);
+  line(505,288,505,170);
   
 }
 void mouseClicked() {

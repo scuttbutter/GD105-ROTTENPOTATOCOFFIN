@@ -6,11 +6,11 @@ void setup() {
   size (810, 780);
   background (#ffffff);
   strokeWeight(3);
-  stroke(#ffffff);
 }
 
 void draw() {
   // making the bases of the rectangles??
+  noStroke();
   fill(#e6e5e0);
   rect(25, 25, 160, 120);
   rect (25, 170, 160, 120);
@@ -85,7 +85,20 @@ void draw() {
   rect(645, 190+450, 120, 77);
 
   // lines column 1
-  line(146, 292, 146, 172);
+  // THESE LINES ACTAUALLY TOOK ME AGES TO FIGURE OUT
+  stroke(189,62,27,165);// the last number adjusts the opacity of the line
+  line(146, 288, 146, 171);
+  stroke(189,62,27,165);
+  line(63, 288, 63, 171);
+  stroke(33,57,40,140);
+  line(26, 228, 183, 227);
+ 
+  stroke(189,62,57,165);
+  line(276, 288, 275, 171);
+  stroke(189,62,57,165);
+  line(63, 288, 63, 171);
+  stroke(33,57,40,140);
+  line(26, 228, 183, 227);
   
 }
 void mouseClicked() {

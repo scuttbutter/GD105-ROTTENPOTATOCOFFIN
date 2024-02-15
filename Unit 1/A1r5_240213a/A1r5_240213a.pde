@@ -1,9 +1,11 @@
-int numGems = 20; // Number of gems
+int numGems = 45; // Number of gems
 Gem[] gems = new Gem[numGems];
 
 PImage playboyLogo;
 
 void setup() {
+    background(255,121,222);
+
   size(800, 800); // Set window size to 800x800
   playboyLogo = loadImage("playboy_logo.png"); // Load Playboy logo image
   playboyLogo.resize(200, 0); // Resize logo to fit within the window
@@ -13,7 +15,27 @@ void setup() {
 }
 
 void draw() {
-  background(255,121,222);
+  background(255,121,178);
+  
+    // Define the center of the gradient
+  float centerX = width / 2;
+  float centerY = height / 2;
+  
+  // Define the radius of the gradient
+  float maxRadius = max(width, height);
+  
+  // Define the two colors for the gradient
+  color c1 = color(255, 242, 242); // Red
+  color c2 = color(248, 105, 149); // Blue
+  
+  // Draw the radial gradient
+  for (float r = 0; r < maxRadius; r++) {
+    float inter = map(r, 0, maxRadius, 0, 2);
+    color c = lerpColor(c1, c2, inter);
+    stroke(c);
+    noFill();
+    ellipse(centerX, centerY, r * 2, r * 2);
+  }
   
   // Draw gems
   for (int i = 0; i < numGems; i++) {

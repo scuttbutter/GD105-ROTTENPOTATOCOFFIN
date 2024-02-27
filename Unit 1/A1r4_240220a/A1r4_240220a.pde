@@ -22,9 +22,9 @@ void draw(){
   rect(115,145,250,171,-299);
   fill(#79d595);
   noStroke();
-  circle(332,57,83);
+  circle(332,65,83);
   circle(350,96,61);
-  ellipse(0,0,0,0);
+  ellipse(420,114,182,50);
   
   strokeWeight(20);
   stroke(#2b2b2b);

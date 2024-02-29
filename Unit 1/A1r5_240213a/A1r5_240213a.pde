@@ -11,7 +11,7 @@ PFont juicyFont;
 PImage playboyLogo;
 
 void setup() {
-  size(800, 800); // Set window size to 800x800
+  size(800, 800); 
   background(255, 121, 222);
   
   juicyFont = createFont("OldLondon.ttf", 36); // Load Juicy Couture font

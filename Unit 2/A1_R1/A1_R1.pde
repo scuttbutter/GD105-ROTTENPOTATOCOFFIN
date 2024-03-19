@@ -4,25 +4,24 @@
 
  PImage img;
  PImage funnyMan;
- PImage JACOB;
  PImage playdoughIsaac;
  PImage heDOES;
  PImage transLAZ;
  PImage cuntySimon;
  PImage simonKitty;
+ 
  float flash=255;
  float speed=100;
  
  void setup(){
   size(1000,800);
-  background(#fc9fd6);
+  background(#fac5e9);
   strokeWeight(25);
   stroke(255,0,0);
   
   funnyMan = loadImage("Booksimon.jpeg"); 
    heDOES = loadImage("heDoes.png");
   img = loadImage("Cofsimon.png");  //i inact started with no isaac
-  JACOB = loadImage("jacobUnlock.png");
   playdoughIsaac = loadImage("playdoughCookie.png");
  transLAZ = loadImage("TRANSlaz.png");
  cuntySimon = loadImage("simonPeacesign.png");
@@ -36,7 +35,6 @@ void draw(){
   image(cuntySimon,0,-17);
   image(simonKitty,569,312);
   image(img,-403,-236);
-  image(JACOB,-106,471);
   image(playdoughIsaac,814,512);
   image(transLAZ,214,637);
   

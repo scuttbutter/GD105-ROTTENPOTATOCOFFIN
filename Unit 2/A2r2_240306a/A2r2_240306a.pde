@@ -9,7 +9,7 @@ void setup() {
 }
 
 void draw() {
-  background(255, 255, 255);
+  background(62, 63, 75);
   translate(width/2, height/2); // Translate origin to center
 
   // Loop through each shape

@@ -2,7 +2,7 @@
 //TODAY WERE MAKING A COLLAGE OFFF SOME OF MY FAVOS EVER 
 //STARTING WITH ISAAC(OBVI)
 
- PImage img;
+ PImage img;// setting variables 
  PImage funnyMan;
  PImage playdoughIsaac;
  PImage heDOES;
@@ -19,7 +19,7 @@
   strokeWeight(25);
   stroke(255,0,0);
   
-  funnyMan = loadImage("Booksimon.jpeg"); 
+  funnyMan = loadImage("Booksimon.jpeg"); // loading images 
    heDOES = loadImage("heDoes.png");
   img = loadImage("Cofsimon.png");  //i inact started with no isaac
   playdoughIsaac = loadImage("playdoughCookie.png");
@@ -30,7 +30,7 @@
  } 
   
 void draw(){
-  image(funnyMan,686,7);
+  image(funnyMan,686,7);//"drawing" images 
   image(heDOES,790,274);
   image(cuntySimon,0,-17);
   image(simonKitty,569,312);

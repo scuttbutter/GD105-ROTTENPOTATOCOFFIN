@@ -1,11 +1,14 @@
+PImage dots ;
 float angle = 0;
-int frameCount = 120; // Number of frames
+int frameCount = 350; // Number of frames
 int numShapes = 8; // Number of shapes
 float radius = 100; // Radius of the circular motion
 
 void setup() {
   size(400, 400);
   frameRate(24); // Set frame rate
+  dots = loadImage("hehe.png");
+  
 }
 
 void draw() {
@@ -36,11 +39,16 @@ void draw() {
   // Save the frame if it's the last frame
   if (frameCount == frameCount-1) {
     saveFrame("looping.gif");
+    
   }
+  image(dots,-303,-179);
+  
 }
 
+
+// TRYING TO FIGURE OUT HOW TO MAKE A DITHERING EFFECT MATTHEW PLEASE HELP ME
 void drawShape() {
-  fill(random(255), random(255), random(255)); // Random fill color
+  fill(0, random(75,255), random(75,255)); // Random fill color
   rectMode(CENTER);
   rect(0, 0, 40, 40); // Draw a square
 }

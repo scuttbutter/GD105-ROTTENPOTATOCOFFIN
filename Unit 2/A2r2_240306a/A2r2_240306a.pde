@@ -1,32 +1,40 @@
-PImage dots ;
+PGraphics pg;
+PImage dots;
 float angle = 0;
-int frameCount = 350; // Number of frames
+int frameCount= 350; // Number of frames
 int numShapes = 8; // Number of shapes
 float radius = 100; // Radius of the circular motion
 
 void setup() {
   size(400, 400);
   frameRate(24); // Set frame rate
-  dots = loadImage("hehe.png");
-  
+  //dots = loadImage("hehe.png");
+  pg = createGraphics(width, height);
+  dots = loadImage("hehe2.png");
 }
 
 void draw() {
-  background(62, 63, 75);
-  translate(width/2, height/2); // Translate origin to center
-
+  background(3, 3, 3);
+  pg.beginDraw();
+  pg.background(11, 11, 11);
+  pg.noStroke();
+  pg.translate(width/2, height/2); // Translate origin to center
+  pg.fill(0, random(75, 255), random(75, 255)); // Random fill color
+  pg.rectMode(CENTER);
   // Loop through each shape
   for (int i = 0; i < numShapes; i++) {
     float x = cos(radians(angle + i * 360 / numShapes)) * radius;
     float y = sin(radians(angle + i * 360 / numShapes)) * radius;
 
     // Draw the shape
-    pushMatrix();
-    translate(x, y);
-    rotate(radians(angle * (i + 1)));
-    drawShape();
-    popMatrix();
+    pg.pushMatrix();
+    pg.translate(x, y);
+    pg.rotate(radians(angle * (i + 1)));
+    pg.square(0, 0, 100);
+    //pg.circle(0, 0, frameCount);
+    pg.popMatrix();
   }
+  pg.endDraw();
 
   // Increment angle for the next frame
   angle += 360 / frameCount;
@@ -37,18 +45,10 @@ void draw() {
   }
 
   // Save the frame if it's the last frame
-  if (frameCount == frameCount-1) {
-    saveFrame("looping.gif");
-    
-  }
-  image(dots,-303,-179);
-  
-}
-
-
-// TRYING TO FIGURE OUT HOW TO MAKE A DITHERING EFFECT MATTHEW PLEASE HELP ME
-void drawShape() {
-  fill(0, random(75,255), random(75,255)); // Random fill color
-  rectMode(CENTER);
-  rect(0, 0, 40, 40); // Draw a square
+  //if (frameCount == frameCount-1) {
+  //  saveFrame("looping.gif");
+  //}
+  //image(dots,-303,-179);
+  pg.mask(dots);
+  image(pg, 0, 0);
 }

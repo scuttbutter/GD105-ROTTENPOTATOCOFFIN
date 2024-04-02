@@ -14,12 +14,12 @@ void setup() {
 }
 
 void draw() {
-  background(3, 3, 3);
+  background(0, 0, 0);
   pg.beginDraw();
-  pg.background(11, 11, 11);
+  pg.background(0, 0, 0);
   pg.noStroke();
   pg.translate(width/2, height/2); // Translate origin to center
-  pg.fill(0, random(75, 255), random(75, 255)); // Random fill color
+  pg.fill(250,156,216); // Random fill color
   pg.rectMode(CENTER);
   // Loop through each shape
   for (int i = 0; i < numShapes; i++) {
@@ -30,7 +30,7 @@ void draw() {
     pg.pushMatrix();
     pg.translate(x, y);
     pg.rotate(radians(angle * (i + 1)));
-    pg.square(0, 0, 100);
+    pg.square(0, 0,50);
     //pg.circle(0, 0, frameCount);
     pg.popMatrix();
   }

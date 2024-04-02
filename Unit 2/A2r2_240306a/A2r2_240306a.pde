@@ -1,3 +1,5 @@
+// DANCING CIRCLEs
+
 PGraphics pg;
 PImage dots;
 float angle = 0;
@@ -30,8 +32,8 @@ void draw() {
     pg.pushMatrix();
     pg.translate(x, y);
     pg.rotate(radians(angle * (i + 1)));
-    pg.square(0, 0,50);
-    //pg.circle(0, 0, frameCount);
+    //pg.square(0, 0,50);
+    pg.circle (35,35,50);
     pg.popMatrix();
   }
   pg.endDraw();

@@ -9,9 +9,14 @@
  PImage transLAZ;
  PImage cuntySimon;
  PImage simonKitty;
+ PImage skeleton;
+ PImage maxwell;
+ PImage upper;
+ PImage pogSimon;
+ PImage craig;
  
  float flash=255;
- float speed=100;
+ float speed=75;
  
  void setup(){
   size(1000,800);
@@ -26,18 +31,28 @@
  transLAZ = loadImage("TRANSlaz.png");
  cuntySimon = loadImage("simonPeacesign.png");
  simonKitty = loadImage("simonKitty .png");
-
+ skeleton = loadImage("skelly bones.png");
+ maxwell = loadImage("simonWithCat.png");
+ upper = loadImage("Upper.png");
+  pogSimon = loadImage("surprisedSimon.png");
+  craig = loadImage("Craig.png");
+  
+ 
  } 
   
 void draw(){
-  image(funnyMan,686,7);//"drawing" images 
+  image(skeleton, -51,15);
+  image(pogSimon,607,394);
+  image(funnyMan,699,7);
+  image(maxwell,595,200);
   image(heDOES,790,274);
   image(cuntySimon,0,-17);
-  image(simonKitty,569,312);
+  image(simonKitty,704,484);
   image(img,-403,-236);
   image(playdoughIsaac,814,512);
   image(transLAZ,214,637);
-  
+  image(upper,603,427);
+    image(craig,603,427);
   
   noFill();
   circle(504,214,422);

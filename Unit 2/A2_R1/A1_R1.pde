@@ -20,7 +20,7 @@
  
  void setup(){
   size(1000,800);
-  background(#fac5e9);
+  background(#000000);
   strokeWeight(25);
   stroke(255,0,0);
   
@@ -52,10 +52,10 @@ void draw(){
   image(playdoughIsaac,814,512);
   image(transLAZ,214,637);
   image(upper,603,427);
-    image(craig,603,427);
+    image(craig,743,253);
   
   noFill();
-  circle(504,214,422);
+  circle(450,214,422);
   
   line(135,427,244,362);
   triangle(212,346,254,353,245,405);
